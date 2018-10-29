@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pintas_no_name_full_colour"
+    android:orientation="vertical" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/Back"
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/home"
+            android:onClick="onClickBack"
+            android:textColor="@color/White"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="45dp" >
+	        
+	        <TableRow
+	            android:id="@+id/tableRow1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="30dp" >
+
+                <TextView
+                    android:id="@+id/student_list_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="40dp"
+                    android:text="@string/studentID_text"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Black" />
+
+                <TextView
+                    android:id="@+id/studentID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/student_id_value"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Black"
+                  />
+		    </TableRow>
+
+	         <TableRow
+	            android:id="@+id/tableRow2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="30dp" >
+	
+	            <TextView
+	                android:id="@+id/student_list_surname"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/firstname_text"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@color/Black" />
+	
+	            <EditText
+	                android:id="@+id/firstname"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="10"
+	                android:inputType="text" />
+	
+	        </TableRow>
+	         <TableRow
+	            android:id="@+id/tableRow3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="30dp" >
+	
+	            <TextView
+	                android:id="@+id/student_list_id"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/surname_text"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@color/Black" />
+	
+	            <EditText
+	                android:id="@+id/lastname"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="10"
+	                android:inputType="text" >
+	
+	                <requestFocus />
+	            </EditText>
+	
+	        </TableRow>
+
+	         <TextView
+	             android:id="@+id/textView1"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:text="@string/text_delete_instructions"
+	             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    </TableLayout>
+
+	     <LinearLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:gravity="center_horizontal" >
+
+	         <Button
+	             android:id="@+id/Add"
+	             style="@style/AppTheme"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_margin="16dp"
+	             android:onClick="onClickAdd"
+	             android:text="@string/button_addStudent"
+	             android:background="@drawable/buttonshape"
+	             android:textColor="@color/White"
+	             android:textSize="30sp"
+	             android:textStyle="bold"/>
+
+	         <Button
+	             android:id="@+id/Delete"
+	             style="@style/AppTheme"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_margin="16dp"
+	             android:onClick="onClickDelete"
+	             android:text="@string/button_deleteStudent"
+	             android:background="@drawable/buttonshape"
+	             android:textColor="@color/White"
+	             android:textSize="30sp"
+	             android:textStyle="bold"/>
+	     </LinearLayout>
+	
+	    <ListView
+	        android:id="@android:id/list"
+	        android:layout_width="match_parent"
+	        android:layout_height="407dp" >
+	    </ListView>
+	    
+	</LinearLayout> 
+        <LinearLayout
+        android:id="@+id/undobar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="30dp"
+        android:alpha="100"
+        android:background="#808080"
+        android:dividerPadding="11dp"
+        android:padding="4dp" >
+
+        <TextView
+            android:id="@+id/undobar_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/undo_bar_text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/undobar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="#808080"
+            android:drawableLeft="@drawable/ic_action_undo"
+            android:onClick="onClick"
+            android:text="@string/button_undo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+</FrameLayout> 
+
+

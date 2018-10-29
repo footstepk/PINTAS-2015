@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pintas_logo" >
+
+    <Button
+        android:id="@+id/button_start_student_session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_start_student_session"
+        android:onClick="onClickStartStudentSession" 
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/button_view_student_results"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button_setup_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_setup_students"
+        android:onClick="onClickSetupStudents" 
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/button_start_student_session"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="71dp"
+        android:layout_marginStart="71dp" />
+
+      <Button
+        android:id="@+id/button_view_student_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:text="@string/button_view_student_results"
+        android:onClick="onClickViewResults" 
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+          android:layout_marginBottom="151dp"
+          android:layout_marginLeft="62dp"
+          android:layout_marginStart="62dp"
+          android:layout_alignParentBottom="true"
+          android:layout_toRightOf="@+id/button_start_student_session"
+          android:layout_toEndOf="@+id/button_start_student_session" />
+    
+
+</RelativeLayout>
+

@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.testlayout.MainActivity" >
+
+
+
+    <LinearLayout
+        android:id="@+id/buttonbar"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"  >
+
+        <ImageButton
+            android:id="@+id/imageBtnBack"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="8dp"
+            android:background="@drawable/home"
+            android:onClick="goHome"/>
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/buttonshape"
+            android:onClick="goBack"
+            android:padding="8dp"
+            android:text="Back"
+            android:textColor="@color/White"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/imageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/buttonshape"
+            android:onClick="deleteDrawing"
+            android:padding="8dp"
+            android:text="Delete"
+            android:textColor="@color/White"
+            android:clickable="true" />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_margin="8dp"
+            android:id="@+id/button"
+            android:clickable="true"
+            android:textColor="@color/White"
+            android:background="@drawable/buttonshape"
+            android:onClick="goForward" />
+
+
+    </LinearLayout>
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestures_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:eventsInterceptionEnabled="false"
+        android:gestureColor="@color/bg_custom_colour"
+        android:gestureStrokeType="multiple"
+        android:padding="8dp"
+        android:uncertainGestureColor="@color/bg_custom_colour" >
+        
+  
+       <com.projectpintas.DrawingCanvas
+        android:id="@+id/the_canvas"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="20dip" >
+        
+        </com.projectpintas.DrawingCanvas>
+
+	</android.gesture.GestureOverlayView>
+   
+    
+ </RelativeLayout>
